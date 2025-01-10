@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: mongodb # we want this service name in uri of backend 
+  namespace: chat-app
+spec:
+  selector:
+    app: mongodb
+  ports:
+  - port: 27017
+    targetPort: 27017 
